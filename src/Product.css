@@ -1,0 +1,34 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400&display=swap");
+
+.product {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  padding: 1rem;
+  /* border: 1px solid black; */
+  margin: 1rem;
+  /* border-radius: 1rem; */
+  background-color: #ffffff;
+}
+
+.product > img {
+  max-height: 300px;
+  width: 100%;
+  object-fit: contain;
+  margin-bottom: 1rem;
+  /* border-radius: 1rem; */
+}
+
+.product__info {
+  font-family: "Noto Sans TC", sans-serif;
+  line-height: 1.2rem;
+}
+
+.product > button {
+  background-color: black;
+  color: blanchedalmond;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  font-family: "Noto Sans TC", sans-serif;
+  margin-top: 1rem;
+}
