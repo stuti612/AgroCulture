@@ -5,8 +5,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import { useStateValue } from "./StateProvider";
 
 function Header() {
+  const { cartItems } = useStateValue();
   return (
     <nav className="header">
       {/* logo */}
@@ -29,13 +31,13 @@ function Header() {
       {/* login and cart icons */}
 
       <div className="header__nav">
-        <Link to="/" className="header__link header__cart">
+        <Link to="/checkout" className="header__link header__cart">
           <FontAwesomeIcon
             className="header__option"
             icon={faShoppingCart}
             size="2x"
           />
-          <span>0</span>
+          <span>{cartItems.length}</span>
         </Link>
         <Link to="/login" className="header__link">
           <FontAwesomeIcon className="header__option" icon={faUser} size="2x" />
