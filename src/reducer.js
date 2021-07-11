@@ -39,28 +39,6 @@ export const reducer = (state, { type, id, item }) => {
         ...state,
         finalPrice: item,
       };
-
-    // case BUY_AT_FULL_PRICE:
-    //   return {
-    //     ...state,
-    //     cartItems: cartItems.map((item) => {
-    //       return item.id === id ? { ...item, price: item.bPrice } : item;
-    //     }),
-    //   };
-    // case BUY_AT_HALF_PRICE:
-    //   return {
-    //     ...state,
-    //     cartItems: cartItems.map((item) => {
-    //       return item.id === id ? { ...item, price: item.bPrice / 2 } : item;
-    //     }),
-    //   };
-    // case RENT:
-    //   return {
-    //     ...state,
-    //     cartItems: cartItems.map((item) => {
-    //       return item.id === id ? { ...item, price: item.bPrice } : item;
-    //     }),
-    //   };
     default:
       return state;
   }

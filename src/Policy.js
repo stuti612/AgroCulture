@@ -10,6 +10,8 @@ function Policy() {
   const getProductPolicy = (products, productId) =>
     products.find((product) => product.id === productId);
 
+  // const data = await getProductPolicy(_, productId)
+
   return (
     <div>
       <div>
