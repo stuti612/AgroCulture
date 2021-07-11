@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useParams } from "react-router";
 import { Link } from "react-router-dom";
 import { useStateValue } from "./StateProvider";
@@ -6,6 +6,35 @@ import { useStateValue } from "./StateProvider";
 function Policy() {
   const { productId } = useParams;
   const { dispatch } = useStateValue();
+  const [currentPrice, setCurrentPrice] = useState(null);
+  const [value, setValue] = useState({
+    halfPrice: 0,
+    fullPrice: 0,
+    rentPrice: 0,
+  });
+  const onClick = () => {
+    if (!currentPrice) {
+      return alert("Select Value !!");
+    }
+    dispatch({
+      type: "setPrice",
+      item: currentPrice,
+    });
+  };
+
+  useEffect(() => {
+    (async () => {
+      //fetch from here
+      const data = { rprice: 22, bprice: 25 };
+      // const data = await getProductPolicy(_, productId);
+      setValue({
+        ...value,
+        halfPrice: data.bprice / 2,
+        fullPrice: data.bprice,
+        rentPrice: data.rprice,
+      });
+    })();
+  }, []);
 
   const getProductPolicy = (products, productId) =>
     products.find((product) => product.id === productId);
@@ -21,7 +50,10 @@ function Policy() {
             id="radio1"
             name="radio"
             type="radio"
-            onChange={() => dispatch({ type: "buyAtFullPrice", id: productId })}
+            price={value.fullPrice}
+            onChange={(e) => {
+              setCurrentPrice(e.target.attributes[3].nodeValue);
+            }}
           />
           <label for="radio1">Buy at Full Price</label>
         </div>
@@ -30,7 +62,10 @@ function Policy() {
             id="radio2"
             name="radio"
             type="radio"
-            onChange={() => dispatch({ type: "buyAtHalfPrice", id: productId })}
+            price={value.halfPrice}
+            onChange={(e) => {
+              setCurrentPrice(e.target.attributes[3].nodeValue);
+            }}
           />
           <label for="radio2">Buy at Half Price</label>
         </div>
@@ -42,12 +77,15 @@ function Policy() {
             id="radio3"
             name="radio"
             type="radio"
-            onChange={() => dispatch({ type: "rent", id: productId })}
+            price={value.rentPrice}
+            onChange={(e) => {
+              setCurrentPrice(e.target.attributes[3].nodeValue);
+            }}
           />
           <label for="radio3">Rent</label>
         </div>
       </div>
-      <Link to="/checkout">
+      <Link onClick={onClick} to="/checkout">
         <button>Go to Cart</button>
       </Link>
     </div>
