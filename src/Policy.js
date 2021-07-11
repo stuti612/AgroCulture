@@ -39,12 +39,9 @@ function Policy() {
   const getProductPolicy = (products, productId) =>
     products.find((product) => product.id === productId);
 
-  // const data = await getProductPolicy(_, productId)
-
   return (
     <div>
       <div>
-        {/* <button>Buy Now</button> */}
         <div className="radiobutton">
           <input
             id="radio1"
@@ -71,7 +68,6 @@ function Policy() {
         </div>
       </div>
       <div>
-        {/* <button>Rent Now</button> */}
         <div className="radiobutton">
           <input
             id="radio3"
