@@ -35,9 +35,11 @@ export const reducer = (state, { type, id, item }) => {
         cartItems: newCart,
       };
     case SET_PRICE:
+      console.log(state.finalPrice);
+      const res = (state.finalPrice += +item);
       return {
         ...state,
-        finalPrice: item,
+        finalPrice: res,
       };
 
     // case BUY_AT_FULL_PRICE:

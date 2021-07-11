@@ -26,7 +26,7 @@ function Policy() {
     (async () => {
       //fetch from here
       const data = { rprice: 22, bprice: 25 };
-
+      // const data = await getProductPolicy(_, productId);
       setValue({
         ...value,
         halfPrice: data.bprice / 2,
