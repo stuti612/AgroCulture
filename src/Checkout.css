@@ -1,7 +1,14 @@
+.checkout {
+  max-width: 1500px;
+  margin: auto;
+}
+
 .checkout__title {
   text-align: center;
-  margin-bottom: 1rem;
+  padding-bottom: 1rem;
   margin-top: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid lightgray;
 }
 
 .checkout__product {

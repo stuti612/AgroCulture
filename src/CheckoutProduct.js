@@ -1,8 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./CheckoutProduct.css";
+import { REMOVE_FROM_CART } from "./reducer";
+import { useStateValue } from "./StateProvider";
 
 function CheckoutProduct({ id, image, name, bPrice, rPrice }) {
+  const { dispatch } = useStateValue();
+
   return (
     <div className="checkoutProduct">
       <img src={image} alt={id} />
@@ -24,15 +28,13 @@ function CheckoutProduct({ id, image, name, bPrice, rPrice }) {
       <div className="checkoutProduct__button">
         <Link to={`/policies/${id}`}>
           <button className="checkoutProduct__button--buy">
-            Buying Options
+            Buying Preference
           </button>
         </Link>
-        <Link to={`/policies/${id}`}>
-          <button className="checkoutProduct__button--rent">
-            Renting Options
-          </button>
-        </Link>
-        <button className="checkoutProduct__button--remove">
+        <button
+          className="checkoutProduct__button--remove"
+          onClick={() => dispatch({ type: REMOVE_FROM_CART, id: id })}
+        >
           Remove From Cart
         </button>
       </div>

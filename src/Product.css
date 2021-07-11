@@ -25,13 +25,13 @@
 }
 
 .product > button {
-  background-color: black;
-  color: blanchedalmond;
+  background-color: #1c2833;
+  color: #c0392b;
   padding: 0.5rem;
   border-radius: 0.5rem;
   font-family: "Noto Sans TC", sans-serif;
   margin-top: 0.8rem;
-  font-size: 1rem;
+  font-size: 1.2rem;
   outline: none;
   border: none;
 }

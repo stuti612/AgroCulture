@@ -13,7 +13,7 @@ function Home() {
       <div className="home__row">
         <Product
           id="1234"
-          image="https://images.unsplash.com/photo-1532929900024-6413d2ed39c8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1373&q=80"
+          image="https://cdn.pixabay.com/photo/2014/07/06/17/20/tractor-385681_960_720.jpg"
           name="Yellow Farm Tractor"
           bPrice={6.6}
           rPrice={15000}
