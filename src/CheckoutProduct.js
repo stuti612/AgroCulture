@@ -26,13 +26,24 @@ function CheckoutProduct({ id, image, name, bPrice, rPrice }) {
       </div>
 
       <div className="checkoutProduct__button">
-        <button className="checkoutProduct__button--buy">
+        <button
+          className="checkoutProduct__button--buy"
+          onClick={() => dispatch({ type: REMOVE_FROM_CART, id: id })}
+        >
           Buy At Full Price
         </button>
-        <button className="checkoutProduct__button--buyHalf">
+        <button
+          className="checkoutProduct__button--buyHalf"
+          onClick={() => dispatch({ type: REMOVE_FROM_CART, id: id })}
+        >
           Buy At Half Price
         </button>
-        <button className="checkoutProduct__button--rent">Rent</button>
+        <button
+          className="checkoutProduct__button--rent"
+          onClick={() => dispatch({ type: REMOVE_FROM_CART, id: id })}
+        >
+          Rent
+        </button>
         <button
           className="checkoutProduct__button--remove"
           onClick={() => dispatch({ type: REMOVE_FROM_CART, id: id })}

@@ -61,7 +61,7 @@ function ProductDetail() {
           </p>
           <p style={{ marginBottom: "1rem" }}>
             Rent @ <small>Rs </small>
-            <span>{product.rprice}/month</span>
+            <span>{product.rprice} /month</span>
           </p>
           <button
             onClick={() => {

@@ -24,7 +24,10 @@ function Product({ id, image, name, bPrice, rPrice }) {
     <div className="product">
       <img src={image} alt={id} />
       <div className="product__info">
-        <Link to={`/product/${id}`}>
+        <Link
+          style={{ textDecoration: "none", color: "#c0392b" }}
+          to={`/product/${id}`}
+        >
           <p>
             <strong>{name}</strong>
           </p>

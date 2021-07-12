@@ -47,22 +47,29 @@
   max-width: 45%;
   margin: 1rem;
   padding: 1rem;
-  background-color: yellow;
+  background-color: #ffffff;
+  color: #1c2833;
 }
 
 .product__policy--rent h1 {
   padding: 1rem;
   text-align: center;
+  color: #c0392b;
 }
 
 .product__policy--buy {
   max-width: 45%;
-  background-color: aqua;
+  background-color: #ffffff;
   margin: 1rem;
+  color: #1c2833;
   padding: 1rem;
 }
 
 .product__policy--buy h1 {
   padding: 1rem;
   text-align: center;
+  color: #c0392b;
 }
+
+/* #c0392b
+#1c2833 */
