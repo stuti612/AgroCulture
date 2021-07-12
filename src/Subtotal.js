@@ -3,12 +3,12 @@ import { getTotal } from "./reducer";
 import { useStateValue } from "./StateProvider";
 
 function Subtotal() {
-  const { cartItems } = useStateValue;
-  console.log(cartItems);
+  const { cartItems, finalPrice } = useStateValue();
+  console.log({ finalPrice });
 
   return (
     <div>
-      <h1>Subtotal : {getTotal(cartItems)}</h1>
+      <h1>Subtotal : {finalPrice}</h1>
     </div>
   );
 }

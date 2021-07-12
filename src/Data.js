@@ -1,33 +1,35 @@
 import firebase from "./firebase";
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import "./Product.css";
 import Product from "./Product.js";
+import { useStateValue } from "./StateProvider";
 
 function Data() {
-  const [products, setProducts] = useState([]);
-  const [loading, setLoading] = useState(false);
+  const { productsDB, setProductsDB } = useStateValue();
+
   const ref = firebase.firestore().collection("products");
 
   function getproduct() {
-    setLoading(true);
     ref.onSnapshot((querySnapshot) => {
       const items = [];
       querySnapshot.forEach((doc) => {
         items.push(doc.data());
       });
-      setProducts(items);
-      setLoading(false);
+      setProductsDB(items);
     });
   }
   useEffect(() => {
     getproduct();
   }, []);
+
+  console.log(productsDB);
+
   return (
     <div>
       <div className="home__row">
-        {products.map((product) => (
+        {productsDB.map((product) => (
           <Product
-            id="1234"
+            id={product.id}
             image={product.img}
             name={product.name}
             bPrice={product.buyprice}

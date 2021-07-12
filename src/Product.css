@@ -9,6 +9,7 @@
   margin: 1rem;
   /* border-radius: 1rem; */
   background-color: #ffffff;
+  justify-content: space-between;
 }
 
 .product > img {

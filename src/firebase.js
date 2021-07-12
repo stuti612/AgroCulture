@@ -1,7 +1,8 @@
 //import Rebase from 're-base';
 // Firebase App (the core Firebase SDK) is always required and must be listed first
 import firebase from "firebase/app";
-import 'firebase/firestore'
+import "firebase/firestore";
+
 // If you are using v7 or any earlier version of the JS SDK, you should import firebase using namespace import
 // import * as firebase from "firebase/app"
 
@@ -10,7 +11,6 @@ import 'firebase/firestore'
 
 // Add the Firebase products that you want to use
 import "firebase/auth";
-
 
 // TODO: Replace the following with your app's Firebase project configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
@@ -21,10 +21,10 @@ const firebaseConfig = {
   storageBucket: "agroculture-26b06.appspot.com",
   messagingSenderId: "229779851568",
   appId: "1:229779851568:web:12c621de2944e025af60f5",
-  measurementId: "G-0GB21LEDRG"
+  measurementId: "G-0GB21LEDRG",
 };
 
 // Initialize Firebase
-firebase.initializeApp(firebaseConfig)
+firebase.initializeApp(firebaseConfig);
 
 export default firebase;

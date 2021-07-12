@@ -5,6 +5,7 @@ import Home from "./Home";
 import Login from "./Login";
 import Checkout from "./Checkout";
 import Policy from "./Policy";
+import ProductDetail from "./ProductDetail";
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/policies/:productId" element={<Policy />} />
+        <Route path="/product/:productId" element={<ProductDetail />} />
       </Routes>
     </div>
   );

@@ -8,19 +8,9 @@ function Home() {
     <div className="home">
       <img
         className="home__image"
-        src="https://media.gettyimages.com/photos/farmer-ploughing-field-picture-id1029301814?s=2048x2048"
+        src="https://images.unsplash.com/photo-1565647952915-9644fcd446a4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
       />
-
-      {/* <div className="home__row"> */}
       <Data />
-      {/* <Product
-          id="1234"
-          image="https://cdn.pixabay.com/photo/2014/07/06/17/20/tractor-385681_960_720.jpg"
-          name="Yellow Farm Tractor"
-          bPrice={6.6}
-          rPrice={15000}
-        /> */}
-      {/* </div> */}
     </div>
   );
 }

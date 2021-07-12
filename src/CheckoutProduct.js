@@ -26,11 +26,13 @@ function CheckoutProduct({ id, image, name, bPrice, rPrice }) {
       </div>
 
       <div className="checkoutProduct__button">
-        <Link to={`/policies/${id}`}>
-          <button className="checkoutProduct__button--buy">
-            Buying Preference
-          </button>
-        </Link>
+        <button className="checkoutProduct__button--buy">
+          Buy At Full Price
+        </button>
+        <button className="checkoutProduct__button--buyHalf">
+          Buy At Half Price
+        </button>
+        <button className="checkoutProduct__button--rent">Rent</button>
         <button
           className="checkoutProduct__button--remove"
           onClick={() => dispatch({ type: REMOVE_FROM_CART, id: id })}

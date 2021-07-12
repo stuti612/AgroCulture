@@ -2,9 +2,10 @@ import React from "react";
 import "./Product.css";
 import { useStateValue } from "./StateProvider";
 import { ADD_TO_CART } from "./reducer";
+import { Link } from "react-router-dom";
 
 function Product({ id, image, name, bPrice, rPrice }) {
-  const { cartItems, dispatch } = useStateValue();
+  const { dispatch } = useStateValue();
 
   const addToCart = () => {
     dispatch({
@@ -23,12 +24,14 @@ function Product({ id, image, name, bPrice, rPrice }) {
     <div className="product">
       <img src={image} alt={id} />
       <div className="product__info">
-        <p>
-          <strong>{name}</strong>
-        </p>
+        <Link to={`/product/${id}`}>
+          <p>
+            <strong>{name}</strong>
+          </p>
+        </Link>
         <p className="product_bprice">
           Buy @ <small>Rs </small>
-          <span>{bPrice} lac</span>
+          <span>{bPrice}</span>
         </p>
         <p className="product_rprice">
           Rent @ <small>Rs </small>
