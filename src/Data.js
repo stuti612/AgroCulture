@@ -28,13 +28,7 @@ function Data() {
     <div>
       <div className="home__row">
         {productsDB.map((product) => (
-          <Product
-            id={product.id}
-            image={product.img}
-            name={product.name}
-            bPrice={product.buyprice}
-            rPrice={product.rprice}
-          />
+          <Product {...product} />
         ))}
       </div>
     </div>

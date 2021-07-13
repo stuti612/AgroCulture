@@ -7,14 +7,11 @@ export const StateContext = createContext({});
 export const StateProvider = ({ children }) => {
   const [productsDB, setProductsDB] = useState([]);
 
-  const [{ cartItems, finalPrice }, dispatch] = useReducer(
-    reducer,
-    initialState
-  );
+  const [{ cartItems, user }, dispatch] = useReducer(reducer, initialState);
 
   return (
     <StateContext.Provider
-      value={{ cartItems, finalPrice, dispatch, productsDB, setProductsDB }}
+      value={{ cartItems, user, dispatch, productsDB, setProductsDB }}
     >
       {children}
     </StateContext.Provider>

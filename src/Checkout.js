@@ -15,16 +15,19 @@ function Checkout() {
         </div>
       ) : (
         <div>
-          <h2 className="checkout__title">Your Cart</h2>
-          <div className="checkout__product">
-            {cartItems.map((item) => (
-              <CheckoutProduct {...item} />
-            ))}
+          <div className="checkout__left">
+            <h2 className="checkout__title">Your Cart</h2>
+            <div className="checkout__product">
+              {cartItems.map((item) => (
+                <CheckoutProduct {...item} />
+              ))}
+            </div>
           </div>
-
-          <div>
-            <Subtotal />
-          </div>
+        </div>
+      )}
+      {cartItems.length > 0 && (
+        <div className="checkout__right">
+          <Subtotal />
         </div>
       )}
     </div>

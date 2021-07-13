@@ -15,6 +15,7 @@ function ProductDetail() {
 
   const product = getProductDetails(productsDB, productId);
 
+  console.log(product);
   // const addToCart = () => {
   //   dispatch({
   //     type: ADD_TO_CART,
@@ -69,6 +70,7 @@ function ProductDetail() {
                 type: ADD_TO_CART,
                 item: {
                   ...product,
+                  price: product.buyprice,
                 },
               });
             }}

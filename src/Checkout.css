@@ -16,3 +16,13 @@
   justify-content: flex-start;
   flex-wrap: wrap;
 }
+
+.checkout__left {
+  width: 100%;
+}
+
+.checkout__right {
+  position: fixed;
+  right: 13%;
+  top: 10rem;
+}

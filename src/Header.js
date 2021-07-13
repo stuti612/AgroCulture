@@ -4,30 +4,16 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { useStateValue } from "./StateProvider";
 
 function Header() {
   const { cartItems } = useStateValue();
   return (
     <nav className="header">
-      {/* logo */}
-
       <Link to="/" className="header__logoLink header__hover">
         <div className="header__logo">AgroCulture</div>
       </Link>
 
-      {/* 
-        <div className="header__search">
-          <input type="text" className="header__searchInput" />
-          <FontAwesomeIcon
-            className="header__searchIcon"
-            icon={faSearch}
-            size="2x"
-          />
-        </div> */}
-
-      {/* login and cart icons */}
       <div className="header__nav">
         <Link
           to="/checkout"

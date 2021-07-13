@@ -1,4 +1,4 @@
-export const initialState = { cartItems: [], finalPrice: 0 };
+export const initialState = { cartItems: [], user: null };
 
 export const ADD_TO_CART = "addToCart";
 export const REMOVE_FROM_CART = "removeFromCart";
@@ -8,14 +8,14 @@ export const RENT = "rent";
 // export const SET_PRICE = "setPrice";
 
 export const getTotal = (items) => {
-  return items.reduce((total, { price }) => total + price, 0);
+  return items.reduce((total, item) => total + item.price, 0);
 };
 
 export const reducer = (state, { type, id, item }) => {
-  const { cartItems } = state;
+  const { cartItems, user } = state;
   switch (type) {
     case ADD_TO_CART:
-      // console.log(item);
+      console.log("testing", item);
       // console.log(state);
       return {
         ...state,
@@ -45,7 +45,9 @@ export const reducer = (state, { type, id, item }) => {
       return {
         ...state,
         cartItems: cartItems.map((item) => {
-          return item.id === id ? { ...item, price: item.buyprice / 2 } : item;
+          return item.id === id
+            ? { ...item, price: item.buyprice - 0.7 * item.buyprice }
+            : item;
         }),
       };
     case RENT:
@@ -54,6 +56,11 @@ export const reducer = (state, { type, id, item }) => {
         cartItems: cartItems.map((item) => {
           return item.id === id ? { ...item, price: item.rprice } : item;
         }),
+      };
+    case "SET_USER":
+      return {
+        ...state,
+        user: user,
       };
     default:
       return state;
