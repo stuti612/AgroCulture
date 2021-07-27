@@ -9,7 +9,7 @@ import { StateProvider } from "./StateProvider";
 ReactDOM.render(
   <React.StrictMode>
     <StateProvider>
-      <Router basename={process.env.PUBLIC_URL}>
+      <Router>
         <App />
       </Router>
     </StateProvider>
