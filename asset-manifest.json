@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/AgroCulture/static/css/main.9254c943.chunk.css",
+    "main.js": "/AgroCulture/static/js/main.07e7ead9.chunk.js",
+    "main.js.map": "/AgroCulture/static/js/main.07e7ead9.chunk.js.map",
+    "runtime-main.js": "/AgroCulture/static/js/runtime-main.0357f7ac.js",
+    "runtime-main.js.map": "/AgroCulture/static/js/runtime-main.0357f7ac.js.map",
+    "static/js/2.28361217.chunk.js": "/AgroCulture/static/js/2.28361217.chunk.js",
+    "static/js/2.28361217.chunk.js.map": "/AgroCulture/static/js/2.28361217.chunk.js.map",
+    "static/js/3.cc9b4e27.chunk.js": "/AgroCulture/static/js/3.cc9b4e27.chunk.js",
+    "static/js/3.cc9b4e27.chunk.js.map": "/AgroCulture/static/js/3.cc9b4e27.chunk.js.map",
+    "index.html": "/AgroCulture/index.html",
+    "static/css/main.9254c943.chunk.css.map": "/AgroCulture/static/css/main.9254c943.chunk.css.map",
+    "static/js/2.28361217.chunk.js.LICENSE.txt": "/AgroCulture/static/js/2.28361217.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0357f7ac.js",
+    "static/js/2.28361217.chunk.js",
+    "static/css/main.9254c943.chunk.css",
+    "static/js/main.07e7ead9.chunk.js"
+  ]
+}
